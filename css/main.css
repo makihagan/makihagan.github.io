@@ -12,5 +12,6 @@ font-family: 'Raleway', sans-serif;
 }
 
 body header {
-    background-image: url(../images/header01Sm.jpg)
+    background: url(../header01Sm.jpg) no-repeat center left;
+    background-size: cover;
 }
