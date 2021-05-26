@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-ie! Popcorn - Contact Us</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&family=Patua+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+</head>
+<body>
+<!--    section#container>header>h1{Pop-ie! Popcorn}+h2{The world's most amazing popcorn}-->
+    <section id="container">
+        <header id="mainHeader">
+            <h1>Pop-ie! Popcorn</h1>
+            <h2>The world's most amazing popcorn</h2>
+        </header>
+        
+<!--        nav>ul>li*6>a[#]-->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Ingredients</a></li>
+                <li><a href="#">Special Offers</a></li>
+                <li><a href="#">Shop for Pop</a></li>
+                <li><a href="pages/contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <h1>Get in touch, we love to hear from you!</h1>
+            
+            <form action="#" method="post" id="mainContactForm" enctype="text/plain">
+                <fieldset class="finfo">
+                    <legend>Your Information</legend>
+<!--                    ul>li*4>label+input-->
+                    <ul>
+                        <li>
+                            <label for="fName">First name:</label>
+                            <input type="text" id="fName" name="first_name" placeholder="Your first name" required autofocus>
+                        </li>
+                        <li>
+                            <label for="lName">Last name:</label>
+                            <input type="text" id="lName" name="last_name" placeholder="Your last name" required>
+                        </li>
+                        <li>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="yourName@domain.com" required>
+                        </li>
+                        <li>
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="888-123-4567">
+                        </li>
+                    </ul>
+                </fieldset>
+                
+                <fieldset class="inquiry">
+                    <legend>Your Inquiry</legend>
+                    <div class="iWrap">
+                        <div class="ff">
+                            <h3>Select your favorite flavor:</h3>
+                            <ul class="radioList">
+                                <li>
+                                    <input type="radio" id="dd" value="dd" name="favType">
+                                    <label for="dd">Diamond Dusted</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ge" value="ge" name="favType">
+                                    <label for="ge">Gold Encrusted</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ss" value="ss" name="favType">
+                                    <label for="ss">Silver Sprinkles</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="sks" value="sks" name="favType">
+                                    <label for="sks">Sunkist Special</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="idk" value="idk" name="favType">
+                                    <label for="idk">I don't know yet</label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="region">
+                            <h3>Select your region:</h3>
+                            <select name="location" id="location">
+                                <option value="">Select closest region:</option>
+                                <option value="westCoast">West Coast</option>
+                                <option value="eastCoast">East Coast</option>
+                                <option value="central">Central</option>
+                                <option value="southWest">South West</option>
+                                <option value="SouthEast">South East</option>
+                                <option value="north">North</option>
+                                <option value="none">None of these</option>
+                            </select>
+                        </div>
+                        
+                        <div class="prod">
+                            <h3>Choose Product:</h3>
+                            <ul class="radioList">
+                                <li>
+                                    <input type="checkbox" name="product" id="pel" value="pel">
+                                    <label for="pel">Precious Element Line</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="product" id="ofl" value="ofl">
+                                    <label for="ofl">Old Fashion Line</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="product" id="pbl" value="pbl">
+                                    <label for="pbl">Probiotic Line</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="product" id="bpl" value="bpl">
+                                    <label for="bpl">Beauty Pop Line</label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ques">
+                            <h3>Inquiry/Comments/Questions</h3>
+                            <textarea name="msg" id="msg" placeholder="Please write your message here..."></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset class="inTouch">
+                    <legend>Stay in touch</legend>
+                    <h3>Sign-up for our newsletter and specials</h3>
+<!--                    ul.radioList>li*2-->
+                    <ul class="radioList">
+                        <li>
+                            <input type="radio" id="emailListY" name="emailList" value="yes" checked>
+                            <label for="emailListY">Yes</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="emailListN" name="emailList" value="no">
+                            <label for="emailListN">Not at this time</label>
+                        </li>
+                    </ul>
+                    
+                    
+                </fieldset>
+                
+                 <input type="reset" id="reset" class="button" value="Reset this form">
+                 <input type="submit" id="submit" class="button" value="Submit it!">
+                
+            </form>
+        </main>
+        
+<!--        footer>h4{Contact info}+p>lorem^p{Copyright 2021}-->
+        <footer>
+            <h4>Contact info</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo officiis unde eaque provident nam. Incidunt, consequatur, veritatis! Ipsa sunt sapiente modi esse, quam cupiditate, alias, iusto vitae eligendi neque est!</p>
+            <p>Copyright 2021</p>
+        </footer>
+        
+    </section>
+</body>
+</html>

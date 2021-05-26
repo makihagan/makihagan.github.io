@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--    <link rel="stylesheet" href="../css/main.css">-->
+
+<style>
+        .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+/*
+        grid-template-areas: 
+            "legend . ."
+            "ff prod reg"
+            "ques ques ." ;
+        */
+    }
+    
+    .ques {
+        grid-column: span 2;
+    }
+
+    
+    .inTouch {
+        grid-area: it;
+    }
+    
+    #submit {
+        grid-area: sub;
+    }
+    
+    #reset {
+        grid-area: rs;
+    }
+    
+/*    inquiry items */
+/*
+    .inquiry legend { grid-area: legend;}
+    .inquiry .ff { grid-area: ff;}
+    .inquiry .region { grid-area: reg;}
+    .inquiry .prod { grid-area: prod;}
+    .inquiry .ques { grid-area: ques;}
+*/
+    
+
+</style>
+</head>
+<body>
+    <form action="">
+        <fieldset class="inquiry">
+                    <legend>Your Inquiry</legend>
+                    <div class="wrapper">
+                        <div class="ff">
+                            <h3>Select your favorite flavor:</h3>
+                            <ul class="radioList">
+                                <li>
+                                    <input type="radio" id="dd" value="dd" name="favType">
+                                    <label for="dd">Diamond Dusted</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ge" value="ge" name="favType">
+                                    <label for="ge">Gold Encrusted</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ss" value="ss" name="favType">
+                                    <label for="ss">Silver Sprinkles</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="sks" value="sks" name="favType">
+                                    <label for="sks">Sunkist Special</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="idk" value="idk" name="favType">
+                                    <label for="idk">I don't know yet</label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="region">
+                            <h3>Select your region:</h3>
+                            <select name="location" id="location">
+                                <option value="">Select closest region:</option>
+                                <option value="westCoast">West Coast</option>
+                                <option value="eastCoast">East Coast</option>
+                                <option value="central">Central</option>
+                                <option value="southWest">South West</option>
+                                <option value="SouthEast">South East</option>
+                                <option value="north">North</option>
+                                <option value="none">None of these</option>
+                            </select>
+                        </div>
+                        
+                        <div class="prod">
+                            <h3>Choose Product:</h3>
+                            <ul class="radioList">
+                                <li>
+                                    <input type="checkbox" name="product" id="pel" value="pel">
+                                    <label for="pel">Precious Element Line</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="product" id="ofl" value="ofl">
+                                    <label for="ofl">Old Fashion Line</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="product" id="pbl" value="pbl">
+                                    <label for="pbl">Probiotic Line</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="product" id="bpl" value="bpl">
+                                    <label for="bpl">Beauty Pop Line</label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ques">
+                            <h3>Inquiry/Comments/Questions</h3>
+                            <textarea name="msg" id="msg" placeholder="Please write your message here..."></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+    </form>
+</body>
+</html>

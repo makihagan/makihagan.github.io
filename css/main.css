@@ -1,18 +1,40 @@
 /*
-font-family: 'Playfair Display', serif;
-font-family: 'Raleway', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Patua One', cursive;
+
+red: #f05257
+blue: #2e63a4
+pale yellow: #ffe68c
+purple: #4e385e
+base: #fffaee
+
+TABLE OF CONTENTS
+    1. global styles
+    2. header
+    3. nav styles
+    4. special styles
+    5. info styles
+    6. footer
+    7. form
+    8. Mid-screen layout
+    9. Large-screen layout
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* 1. global styles */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-aside, article, main, nav, header, footer, section, figure, video, audio {
+header, section, article, aside, nav, footer, main, figure, audio, video {
     display: block;
+}
+
+body {
+    background-color: #fffaee;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.4;
 }
 
 img {
@@ -20,11 +42,413 @@ img {
     height: auto;
 }
 
-header {
+h1 {
+    font-size: 1.5em;
+    color: #4e385e;
+    line-height: 1.1;
     text-align: center;
-    margin-top: 2%;
+    padding: .5em 0;
 }
 
-header .logo {
-    width: 20%;
+h2 {
+    font-weight: normal;
+    font-size: 1.3em;
+    line-height: 1.2;
 }
+
+h3 {
+    font-size: 1.1em;
+    font-weight: normal;
+    font-style: italic;
+    color: #4e385e;
+    text-align: center;
+}
+
+h4 {
+    color: #f05257;
+    border-bottom: solid 1px #666;
+}
+
+h1 + h3 {
+    margin-top: -.5em;
+}
+
+p {
+    font-size: .9em;
+    margin-bottom: .4em;
+}
+
+a {
+    color: #2e63a4;
+    font-weight: 700;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f05257;
+}
+
+#container {
+    width: 96%;
+    margin: 0 auto;
+}
+
+/* 2. header styles */
+#mainHeader {
+    background-color: #f05257;
+    color: #ffe68c;
+    padding: .5em;
+    text-align: center;
+    font-family: 'Patua One', serif;
+}
+
+#mainHeader h1 {
+    font-size: 2.25em;
+    padding: 0 0 .25em;
+}
+
+#pitch {
+    background: url(../images/popcornBG-sm.jpg) no-repeat center left;
+    background-size: cover;
+    display: table-cell;
+    vertical-align: middle;
+    width: 1200px;
+    height: 200px;
+    padding-right: 1em;
+}
+
+#pitch h1, #pitch h3 {
+    color: #ffe68c;
+    padding-left: 50%;
+}
+
+/* 3. nav styles */
+nav {
+    background-color: #4e385e;
+    margin-bottom: .25em;
+    text-align: center;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+nav li {
+    list-style-type: none;
+    border-bottom: solid 1px #fffaee;
+}
+
+nav li:nth-child(odd) {
+    border-right: solid 1px #fffaee;
+}
+
+nav a {
+    color: #ffe68c;
+    text-decoration: none;
+    display: block;
+    padding: .25em;
+}
+
+nav a:hover {
+    background-color: #f05257;
+    color: #fffaee;
+}
+
+
+/* 4. info styles */
+.info {
+    margin-top: 1em; 
+}
+
+/* 5. special styles */
+
+.specials ul {
+    list-style-type: none;
+}
+
+.specials li {
+    padding: .25em;
+}
+
+.specials li:nth-child(even) {
+    background-color: #fbedcc;
+}
+
+/* 6. footer */
+
+footer {
+    margin-top: 1.25em;;
+}
+
+footer h4 {
+    background-color: #f05257;
+    color: #fffaee;
+    padding: .25em;
+}
+
+footer p:last-child {
+    text-align: center;
+    font-size: 75%;
+}
+
+/* 7. Form */
+fieldset {
+    padding: 1em;
+    margin: .75em 0;
+    border: solid 1px #4e385e;
+}
+
+legend {
+    padding: 0 .5em;
+    font-style: italic;
+    font-weight: 700;
+    color: #2e63a4;
+}
+
+form h3 {
+    text-align: left;
+    background-color: #ffe68c;
+    color: #2e63a4;
+    padding: 0 .5em;
+}
+
+form ul {
+    list-style-type: none;
+}
+
+label {
+    color: #2e63a4;
+    margin: .5em 0 0;
+    display: block;
+}
+
+input, textarea {
+    padding: .25em;
+    margin-bottom: .25em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #2e63a4;
+}
+
+::placeholder {
+    color: #999;
+}
+
+input[type="email"] {
+    min-width: 250px;
+}
+
+.radioList label {
+    display: inline-block;
+}
+
+.radioList, select {
+    margin: 0 0 1.25em .5em;
+}
+
+select {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #2e63a4;
+    font-size: 1em;
+    margin-top: .5em;
+}
+
+textarea {
+    font-size: 1em;
+    width: 96%;
+    min-height: 6em;
+    margin: .5em 0 0 .5em;
+}
+
+input.button {
+    background-color: #2e63a4;
+    color: #ffe68c;
+    font-weight: bold;
+    padding: .25em .5em;
+    border-radius: 6px;
+    border: none;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+input.button[type="reset"] {
+    background-color: transparent;
+    color: #2e63a4;
+}
+
+/* 8. Mid-screen layout */
+@media screen and (min-width: 540px) and (max-width:949px) {
+    #pitch {
+        background-image: url(../images/popcornBG-lg.jpg);
+    }
+    
+    .info, .shop {
+        float: left;
+        width: 48%;
+    }
+    .info {
+        margin-right: 4%;
+    }
+    
+    .specials {
+        clear: both;
+    }
+    
+    .specials h1 {
+        background-color: #ffe68c;
+    }
+    
+    .specials li {
+        min-height: 180px;
+    }
+    
+    .specials li:nth-child(odd) {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+    }
+    
+    .specials li:nth-child(even) {
+        float: right;
+        width: 48%;
+        background-color: transparent;
+    }
+    
+    .specials ul:after {
+        content: "";
+        display:block;
+        clear: both;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    form ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 1em;
+    }
+    
+    ul.radioList li {
+        min-width: 150px;
+    }
+    
+    .inTouch ul.radioList li {
+        min-width: inherit;
+    }
+    
+    div:nth-of-type(3) ul.radioList li:nth-child(1) {
+        order: 4;
+    }
+}
+
+/* 9. Large-sreen layout */
+
+@media screen and (min-width: 950px) {
+    nav ul {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    nav li {
+       border-right: solid 1px #fffaee; 
+    }
+    
+    nav li:last-child {
+        border-right: none;
+    }
+    
+    #pitch {
+        background-image: url(../images/popcornBG-lg.jpg);
+    }
+    
+    #container {
+        max-width: 1200px;
+    }
+    
+    main article {
+        width: 32%;
+        margin-bottom: 1em;
+    }
+    
+    .info {
+        margin-right: 0;
+    }
+    
+    .info, .specials {
+        float: left;
+    }
+    
+    .shop {
+        float: right;
+    }
+    
+    .specials {
+        clear: none;
+        margin: 0 2% 1em;
+    }
+    
+    .specials h1 {
+        background-color: transparent;
+    }
+    
+    footer {
+        clear: both;
+        text-align: center;
+    }
+    
+    footer p {
+        max-width: 70%;
+        margin: auto;
+    }
+    
+/*form*/
+    form {
+        display: grid;
+        grid-gap: 0 1em;
+        grid-template-areas: 
+            "info info info info it it it it"
+            "inq inq inq inq inq inq inq inq"
+            "rs sub . . . . . . ";
+    }
+    
+    .finfo {
+        grid-area: info;
+    }
+    
+    .inquiry {
+        grid-area: inq;
+    }
+
+    
+    .inTouch {
+        grid-area: it;
+    }
+    
+    #submit {
+        grid-area: sub;
+    }
+    
+    #reset {
+        grid-area: rs;
+    }
+    
+/*    inquiry items */
+    
+    .iWrap {
+        display: grid;
+        grid-template-areas: 
+            "ff prod reg"
+            "ques ques ." ;
+        grid-gap: 1em;
+    }
+    .inquiry .ff { grid-area: ff;}
+    .inquiry .region { grid-area: reg;}
+    .inquiry .prod { grid-area: prod;}
+    .inquiry .ques { grid-area: ques;}
+    
+}
+
+
+
